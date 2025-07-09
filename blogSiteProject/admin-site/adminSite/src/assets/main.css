@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+.angkor-regular {
+  font-family: 'Angkor', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.antonio {
+  font-family: 'Antonio', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
