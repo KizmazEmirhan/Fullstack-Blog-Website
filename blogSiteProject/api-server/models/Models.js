@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const categorySchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String },
