@@ -1,7 +1,7 @@
 <template>
   <header class="flex container bg-white pt-4">
     <div id="imageWLogo" class="">
-      <img src="@/assets/blogIstanbulSvg.svg" class="w-1/2" alt="" />
+      <img :src="logoImage" class="w-1/2" alt="" />
     </div>
     <nav id="nav" class="w-full flex justify-end items-center pr-4 mr-4">
       <ul id="nav-list" class="flex gap-4 text-lg text-[#2c0fae] font-semibold">
@@ -12,5 +12,13 @@
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+  data() {
+    return { logoImage: new URL('@/assets/blogIstanbulSvg.svg', import.meta.url).href }
+  },
+}
+</script>
 
 <!-- renk kodu = #6528E0 -->
