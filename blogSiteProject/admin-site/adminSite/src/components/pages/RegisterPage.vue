@@ -93,7 +93,7 @@ export default {
         `Gelen bilgiler:${this.name},${this.surname},${this.username},${this.email},${this.password}`,
       )
       try {
-        await axios.post('http://localhost:3000/api/register', {
+        await axios.post('https://blogistanbul-api-production.up.railway.app/api/register', {
           name: this.name,
           surname: this.surname,
           username: this.username,

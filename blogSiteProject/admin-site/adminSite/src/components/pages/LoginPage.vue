@@ -82,7 +82,7 @@ export default {
   methods: {
     async onSubmit() {
       try {
-        const response = await axios.post('http://localhost:3000/api/login', {
+        const response = await axios.post('https://blogistanbul-api-production.up.railway.appş/api/login', {
           email: this.email,
           password: this.password,
         })

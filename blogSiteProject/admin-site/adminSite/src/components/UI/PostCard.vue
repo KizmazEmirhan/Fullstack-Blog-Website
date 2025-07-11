@@ -65,7 +65,7 @@ export default {
     async fetchUserPosts() {
       const token = localStorage.getItem('authToken')
       console.log("Postcard'dan gelen userId:", this.userId)
-      const response = await axios.get('http://localhost:3000/api/blogposts/user', {
+      const response = await axios.get('https://blogistanbul-api-production.up.railway.app/api/blogposts/user', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -75,7 +75,7 @@ export default {
     },
 
     listenForNewPosts() {
-      const eventSource = new EventSource('http://localhost:3000/api/blogposts/stream')
+      const eventSource = new EventSource('https://blogistanbul-api-production.up.railway.app/api/blogposts/stream')
       eventSource.onmessage = (event) => {
         const newPost = JSON.parse(event.data)
         // Eğer bu kullanıcıya aitse ekle

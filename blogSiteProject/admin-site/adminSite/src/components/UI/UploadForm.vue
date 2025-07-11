@@ -192,7 +192,7 @@ export default {
     },
     async getCategories() {
       try {
-        const response = await axios.get('http://localhost:3000/api/categories')
+        const response = await axios.get('https://blogistanbul-api-production.up.railway.app/api/categories')
 
         for (const index in response.data) {
           this.categories.push({
@@ -230,7 +230,7 @@ export default {
         })
         const token = localStorage.getItem('authToken')
 
-        const response = await axios.post('http://localhost:3000/api/blogposts', formData, {
+        const response = await axios.post('https://blogistanbul-api-production.up.railway.app/api/blogposts', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${token}`,
